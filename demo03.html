@@ -3,8 +3,23 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
+	<script src="./node_modules/angular/angular.min.js"></script>
+	<style>
+		li{
+			list-style: none;
+		}
+	</style>
 </head>
-<body>
-	<h3>hello world!</h3>
+<body ng-app="app" ng-controller="MianArr">
+	<ul>
+		<li ng-repeat="v in arr">{{v}}</li>
+	</ul>
+	<h1>hello</h1>
+	<script>
+		var app = angular.module("app",[]);
+		app.controller('MianArr',function($scope){
+			$scope.arr = ['11','12','13']
+		});
+	</script>
 </body>
 </html>
